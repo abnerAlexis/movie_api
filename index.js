@@ -277,31 +277,37 @@ app.get('/movies/:title', (req, res) => {
 //Get director (bio, birth year, death year) by title.
 app.get('/movies/:director', (req, res) => {
  //TO DO
+ res.send("Director Data");
 });
 
 //Add new user
 app.post('/users', (req, res) => {
   //TO DO
+  res.send("Add new user");
 });
 
 //Update a user name
 app.put('/users/:username', (req, res) => {
+  res.send("Update a user's name")
   //TO DO
 });
 
 //Add movie to user's favorites
 app.post('/users/:username', (req, res) => {
   //TO DO
+  res.send("Add movie to a user's favorite movies");
 });
 
 //Remove movie from user's favorites
 app.post('/users/:username', (req, res) => {
   //TO DO
+  res.send("Remove a movie from user's favorite movies")
 });
 
 //Remove user from users list
 app.post('/users/:username', (req, res) => {
   //TO DO
+  res.send("Remove a user from the users list")
 });
 
 //Error handler
