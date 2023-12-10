@@ -69,10 +69,15 @@ let starSchema = mongoose.Schema({
     Biography: String,
 })
 
-let Movie = mongoose.model('Movie', movieSchema);
-let User = mongoose.model('User', userSchema);
-let Star = mongoose.model('Star', starSchema);
+let Movie = mongoose.model('Movie', movieSchema, 'movies');
+let User = mongoose.model('User', userSchema, 'users');
+let Star = mongoose.model('Star', starSchema, 'stars');
 
-module.exports.Movie = Movie;
-module.exports.User = User;
-module.exports.Star = Star;
+// module.exports.Movie = Movie;
+// module.exports.User = User;
+// module.exports.Star = Star;
+module.exports = {
+    Movie, 
+    User,
+    Star
+}

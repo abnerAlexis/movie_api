@@ -9,6 +9,14 @@ const app = express();
 
 app.use(bodyParser.json());
 
+//Require Mongoose package, "models.js" and Mongoose Models
+const mongoose = require('mongoose');
+const Models = require('./models');
+
+const Movies = Models.Movie;
+const Users = Models.User;
+const Stars = Models.Star;
+
 var movieList = [
   {
     title: "The Shawshank Redemption",
